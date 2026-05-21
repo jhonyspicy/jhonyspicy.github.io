@@ -1,4 +1,4 @@
-# [jhonyspicy](https://github.com/jhonyspicy).github.io
+# jhonyspicy.github.io
 
 このリポジトリは、jhonyspicyが作成したWebアプリを公開・紹介するためのポータルページです。
 GitHub Pagesのトップレベル（ https://jhonyspicy.github.io/ ）として機能しています。

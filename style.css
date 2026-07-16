@@ -1,9 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
     min-height: 100vh;
     background-color: #121212;
     font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
@@ -11,13 +9,12 @@ body {
 
 .container {
     text-align: center;
-    padding: 2rem 1rem;
-    background-color: #1e1e1e;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-    max-width: 600px;
-    width: 90%;
-    margin: 20px;
+    padding: 1rem;
+    background-color: transparent;
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -56,17 +53,26 @@ p {
 }
 
 .app-card {
+    position: relative;
     padding: 1.5rem 1rem;
     border: 1px solid #333;
     background-color: #242424;
     border-radius: 8px;
-    transition: transform 0.2s;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     text-align: left;
+    cursor: pointer;
 }
 
 .app-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.app-card a.stretched-link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
 }
 
 .app-card h2 {
